@@ -1,0 +1,1005 @@
+SEMUA KATA BERDASARKAN SKOR TF-IDF
+==================================================
+
+Total kata unik: 1000
+
+  1. gelap                : 26.4788
+  2. indonesia            : 26.2786
+  3. demo                 : 24.9118
+  4. mahasiswa            : 22.7058
+  5. rakyat               : 17.3453
+  6. prabowo              : 16.7501
+  7. mahasewa             : 16.5592
+  8. ampas                : 14.8740
+  9. negara               : 14.3404
+ 10. aset                 : 14.1836
+ 11. jadi                 : 13.6882
+ 12. mau                  : 11.7767
+ 13. semua                : 10.6776
+ 14. presiden             : 10.0517
+ 15. sama                 : 9.0727
+ 16. udah                 : 9.0655
+ 17. gin                  : 8.8451
+ 18. takut                : 8.4717
+ 19. dulu                 : 7.9972
+ 20. perintah             : 7.5143
+ 21. milih                : 7.3357
+ 22. hidup                : 7.2600
+ 23. buat                 : 7.0984
+ 24. pak                  : 6.6769
+ 25. kerja                : 6.4297
+ 26. makan                : 6.4128
+ 27. makin                : 6.1810
+ 28. ruu                  : 6.0556
+ 29. tuntut               : 5.9993
+ 30. banyak               : 5.9690
+ 31. semangat             : 5.9309
+ 32. masa                 : 5.9061
+ 33. salah                : 5.8455
+ 34. kalo                 : 5.8043
+ 35. bayar                : 5.7681
+ 36. jabat                : 5.7664
+ 37. komen                : 5.6689
+ 38. gas                  : 5.6354
+ 39. tuju                 : 5.5306
+ 40. hama                 : 5.4609
+ 41. buzzer               : 5.3973
+ 42. sekarang             : 5.3665
+ 43. pilih                : 5.1099
+ 44. jokowi               : 5.1040
+ 45. pindah               : 5.0555
+ 46. gua                  : 5.0057
+ 47. maju                 : 4.9323
+ 48. bang                 : 4.9116
+ 49. liat                 : 4.8927
+ 50. terus                : 4.8541
+ 51. koruptor             : 4.8445
+ 52. orang                : 4.7478
+ 53. gratis               : 4.5575
+ 54. kaya                 : 4.5271
+ 55. punya                : 4.5240
+ 56. anak                 : 4.4844
+ 57. suruh                : 4.4482
+ 58. hancur               : 4.4462
+ 59. tau                  : 4.3852
+ 60. tuh                  : 4.3619
+ 61. kata                 : 4.2232
+ 62. baik                 : 4.1347
+ 63. bener                : 4.1226
+ 64. indo                 : 4.0587
+ 65. terang               : 4.0047
+ 66. biar                 : 3.9897
+ 67. pas                  : 3.9576
+ 68. allah                : 3.9339
+ 69. bro                  : 3.9051
+ 70. akun                 : 3.8407
+ 71. aksi                 : 3.7949
+ 72. sehat                : 3.7904
+ 73. ujung                : 3.7876
+ 74. uang                 : 3.6757
+ 75. korupsi              : 3.6672
+ 76. ganti                : 3.6090
+ 77. sendiri              : 3.6007
+ 78. udh                  : 3.5538
+ 79. lihat                : 3.5438
+ 80. juang                : 3.5419
+ 81. duit                 : 3.5278
+ 82. negeri               : 3.5255
+ 83. tinggal              : 3.5122
+ 84. era                  : 3.5016
+ 85. penting              : 3.4747
+ 86. kek                  : 3.4457
+ 87. mungkin              : 3.4448
+ 88. dpr                  : 3.4028
+ 89. suara                : 3.3380
+ 90. coba                 : 3.3303
+ 91. mending              : 3.3152
+ 92. wkwk                 : 3.2914
+ 93. susah                : 3.2869
+ 94. malah                : 3.2827
+ 95. padahal              : 3.2691
+ 96. bilang               : 3.2480
+ 97. pdip                 : 3.2350
+ 98. soal                 : 3.1422
+ 99. gerindra             : 3.1092
+100. bakal                : 3.0725
+101. tahun                : 3.0645
+102. bijak                : 3.0598
+103. dukung               : 3.0457
+104. pernah               : 3.0413
+105. moga                 : 3.0279
+106. kali                 : 2.9125
+107. beli                 : 2.8884
+108. masyarakat           : 2.8767
+109. anj                  : 2.8709
+110. lawan                : 2.8700
+111. pangkas              : 2.8629
+112. turun                : 2.7750
+113. adil                 : 2.7731
+114. didik                : 2.7703
+115. bikin                : 2.7625
+116. yakin                : 2.7551
+117. politik              : 2.7510
+118. min                  : 2.7412
+119. ayo                  : 2.7344
+120. satu                 : 2.7259
+121. abah                 : 2.7174
+122. langsung             : 2.7118
+123. capek                : 2.7046
+124. mahasewahama         : 2.6706
+125. kayak                : 2.6660
+126. hilang               : 2.6598
+127. pihak                : 2.6577
+128. masuk                : 2.6551
+129. hukum                : 2.6134
+130. nih                  : 2.6094
+131. remaja               : 2.5959
+132. aamiin               : 2.5687
+133. kecil                : 2.5664
+134. ikut                 : 2.5572
+135. ingat                : 2.5131
+136. kuasa                : 2.5112
+137. rusak                : 2.5054
+138. tetap                : 2.5042
+139. sampe                : 2.4975
+140. nyesel               : 2.4884
+141. revolusi             : 2.4798
+142. jalan                : 2.4688
+143. sewa                 : 2.4540
+144. klo                  : 2.4517
+145. dah                  : 2.4384
+146. dana                 : 2.4321
+147. kesah                : 2.4181
+148. partai               : 2.4159
+149. arti                 : 2.3983
+150. ketua                : 2.3931
+151. ama                  : 2.3916
+152. kemarin              : 2.3888
+153. fomo                 : 2.3709
+154. polisi               : 2.3627
+155. tutup                : 2.3530
+156. jaman                : 2.3309
+157. bisa                 : 2.3295
+158. cahaya               : 2.3193
+159. sini                 : 2.3096
+160. hari                 : 2.2980
+161. enak                 : 2.2810
+162. minta                : 2.2729
+163. lama                 : 2.2377
+164. muda                 : 2.2065
+165. banteng              : 2.1867
+166. nyata                : 2.1531
+167. harga                : 2.1366
+168. kabur                : 2.1309
+169. bobrok               : 2.1284
+170. sakit                : 2.1150
+171. lucu                 : 2.1119
+172. kemaren              : 2.1065
+173. bangun               : 2.0946
+174. ulang                : 2.0698
+175. mata                 : 2.0620
+176. kira                 : 2.0465
+177. benar                : 2.0293
+178. malam                : 2.0252
+179. muncul               : 2.0193
+180. mahal                : 2.0167
+181. doang                : 2.0061
+182. rrakyat              : 2.0000
+183. halo                 : 2.0000
+184. seluruh              : 1.9981
+185. ngeri                : 1.9654
+186. biasa                : 1.9629
+187. korup                : 1.9588
+188. wkwkwk               : 1.9443
+189. parah                : 1.9422
+190. nikmat               : 1.9397
+191. emang                : 1.9198
+192. sedih                : 1.9191
+193. beras                : 1.9102
+194. cara                 : 1.9065
+195. guys                 : 1.9044
+196. kacau                : 1.8953
+197. menang               : 1.8892
+198. bawa                 : 1.8804
+199. tunggang             : 1.8616
+200. pikir                : 1.8532
+201. ingin                : 1.8526
+202. ada                  : 1.8370
+203. asa                  : 1.8323
+204. bem                  : 1.8315
+205. lagu                 : 1.8305
+206. beda                 : 1.8240
+207. ternak               : 1.8229
+208. habis                : 1.8195
+209. jelas                : 1.8073
+210. inti                 : 1.8045
+211. solusi               : 1.7935
+212. ken                  : 1.7801
+213. harap                : 1.7734
+214. sahkan               : 1.7672
+215. ramal                : 1.7569
+216. kip                  : 1.7542
+217. pimpin               : 1.7444
+218. butuh                : 1.7392
+219. gilir                : 1.7233
+220. kuliah               : 1.7124
+221. bahas                : 1.7026
+222. siang                : 1.7018
+223. rame                 : 1.6897
+224. sesuai               : 1.6876
+225. gitu                 : 1.6770
+226. darurat              : 1.6762
+227. sdh                  : 1.6759
+228. balik                : 1.6706
+229. para                 : 1.6665
+230. lapang               : 1.6660
+231. mampir               : 1.6615
+232. sekolah              : 1.6461
+233. lupa                 : 1.6401
+234. depan                : 1.6368
+235. tentu                : 1.6321
+236. the                  : 1.6238
+237. mreka                : 1.6231
+238. demokrasi            : 1.6163
+239. template             : 1.6128
+240. ngga                 : 1.6093
+241. tangan               : 1.6086
+242. efisiensi            : 1.6082
+243. isu                  : 1.6080
+244. alat                 : 1.5999
+245. sabar                : 1.5887
+246. usaha                : 1.5852
+247. dapet                : 1.5708
+248. mulyono              : 1.5657
+249. kalah                : 1.5583
+250. panas                : 1.5569
+251. bubar                : 1.5539
+252. jakarta              : 1.5519
+253. jdi                  : 1.5519
+254. cemas                : 1.5423
+255. tambah               : 1.5297
+256. oknum                : 1.5274
+257. ngerti               : 1.5171
+258. blom                 : 1.5163
+259. kepala               : 1.5152
+260. nama                 : 1.5088
+261. harus                : 1.5081
+262. anggar               : 1.5045
+263. pake                 : 1.5028
+264. uud                  : 1.4991
+265. umur                 : 1.4983
+266. tragedi              : 1.4971
+267. gue                  : 1.4877
+268. tdk                  : 1.4815
+269. begini               : 1.4766
+270. masalah              : 1.4722
+271. cek                  : 1.4596
+272. anjir                : 1.4546
+273. cari                 : 1.4539
+274. mulai                : 1.4488
+275. doa                  : 1.4431
+276. ubah                 : 1.4408
+277. oke                  : 1.4395
+278. dlu                  : 1.4341
+279. jauh                 : 1.4298
+280. merdeka              : 1.4151
+281. laku                 : 1.4139
+282. mantap               : 1.4128
+283. langka               : 1.4121
+284. tidur                : 1.4080
+285. panjang              : 1.4036
+286. prioritas            : 1.4034
+287. lebih                : 1.4016
+288. kasih                : 1.3978
+289. film                 : 1.3877
+290. sebut                : 1.3860
+291. sila                 : 1.3839
+292. cinta                : 1.3808
+293. utk                  : 1.3745
+294. jual                 : 1.3722
+295. neng                 : 1.3703
+296. kelas                : 1.3670
+297. datang               : 1.3634
+298. bnyak                : 1.3598
+299. mikirin              : 1.3592
+300. tikus                : 1.3565
+301. awal                 : 1.3439
+302. ilang                : 1.3420
+303. halang               : 1.3397
+304. gada                 : 1.3346
+305. blm                  : 1.3318
+306. selalu               : 1.3302
+307. peduli               : 1.3297
+308. serah                : 1.3263
+309. bukti                : 1.3231
+310. kembali              : 1.3231
+311. nanti                : 1.3229
+312. noh                  : 1.3217
+313. subianto             : 1.3212
+314. gemoy                : 1.3203
+315. buzer                : 1.3162
+316. awas                 : 1.3133
+317. emas                 : 1.3111
+318. kiamat               : 1.3079
+319. wni                  : 1.3033
+320. percaya              : 1.2991
+321. cerdas               : 1.2988
+322. keluar               : 1.2875
+323. gibran               : 1.2874
+324. milik                : 1.2863
+325. rendah               : 1.2844
+326. sby                  : 1.2814
+327. paham                : 1.2786
+328. anies                : 1.2785
+329. dark                 : 1.2777
+330. dekat                : 1.2758
+331. bapak                : 1.2722
+332. tiap                 : 1.2707
+333. nyadar               : 1.2695
+334. trus                 : 1.2691
+335. kritik               : 1.2666
+336. kaga                 : 1.2664
+337. wakil                : 1.2641
+338. program              : 1.2600
+339. sedikit              : 1.2567
+340. naik                 : 1.2544
+341. rumah                : 1.2513
+342. kasi                 : 1.2486
+343. cepat                : 1.2465
+344. berita               : 1.2413
+345. lanjut               : 1.2275
+346. lulus                : 1.2268
+347. tuhan                : 1.2262
+348. krn                  : 1.2241
+349. yaa                  : 1.2188
+350. dengerin             : 1.2177
+351. tempat               : 1.1940
+352. beliau               : 1.1937
+353. untung               : 1.1903
+354. dengar               : 1.1888
+355. listrik              : 1.1882
+356. bersih               : 1.1810
+357. waktu                : 1.1792
+358. otak                 : 1.1749
+359. jir                  : 1.1731
+360. nunggu               : 1.1717
+361. malaysia             : 1.1697
+362. skincare             : 1.1663
+363. fakta                : 1.1636
+364. beri                 : 1.1591
+365. dua                  : 1.1580
+366. sadar                : 1.1552
+367. buruk                : 1.1549
+368. ibu                  : 1.1542
+369. gmn                  : 1.1532
+370. sempurna             : 1.1491
+371. smua                 : 1.1438
+372. abis                 : 1.1418
+373. sikap                : 1.1266
+374. paksa                : 1.1205
+375. tani                 : 1.1197
+376. baca                 : 1.1015
+377. gila                 : 1.1000
+378. gara                 : 1.0993
+379. ndasmu               : 1.0983
+380. mna                  : 1.0958
+381. berapa               : 1.0946
+382. tunggu               : 1.0916
+383. besar                : 1.0881
+384. ngk                  : 1.0879
+385. skrg                 : 1.0854
+386. judol                : 1.0848
+387. ngapain              : 1.0837
+388. hasil                : 1.0733
+389. dri                  : 1.0717
+390. tiktok               : 1.0707
+391. emg                  : 1.0693
+392. tegak                : 1.0653
+393. mudah                : 1.0617
+394. sengsara             : 1.0613
+395. rugi                 : 1.0612
+396. suka                 : 1.0530
+397. kasus                : 1.0510
+398. bangga               : 1.0506
+399. org                  : 1.0499
+400. pesimis              : 1.0447
+401. memang               : 1.0438
+402. dgn                  : 1.0390
+403. info                 : 1.0378
+404. bpk                  : 1.0377
+405. bngt                 : 1.0345
+406. muka                 : 1.0343
+407. uda                  : 1.0342
+408. bangsa               : 1.0294
+409. bantu                : 1.0290
+410. dampak               : 1.0239
+411. akhir                : 1.0239
+412. adem                 : 1.0226
+413. sosial               : 1.0196
+414. orde                 : 1.0192
+415. sdm                  : 1.0090
+416. hhhhhmmmm            : 1.0000
+417. kerjain              : 1.0000
+418. okegas               : 1.0000
+419. ktanya               : 1.0000
+420. louder               : 1.0000
+421. malu                 : 1.0000
+422. jawahama             : 1.0000
+423. lucuuu               : 1.0000
+424. lanjuuuttttt         : 1.0000
+425. laper                : 1.0000
+426. viralkan             : 1.0000
+427. wallahi              : 1.0000
+428. agustus              : 1.0000
+429. ahahahahhahahahahahahahhhhhahhhahahhhhhhhhhahahahhahahahahahaahahahhahahahahahahhahhahahhahahahahahhhhhhahhhahahhahahahahahhhahahhhhhhhhhhhhhahahahhahahahahahahahahahhahahahahahahahahahhahahahahaahahh : 1.0000
+430. lang                 : 1.0000
+431. lanjuttkan           : 1.0000
+432. lawannnn             : 1.0000
+433. beberapa             : 0.9984
+434. sesal                : 0.9924
+435. atas                 : 0.9912
+436. siapa                : 0.9844
+437. tanah                : 0.9840
+438. guna                 : 0.9833
+439. urus                 : 0.9833
+440. heran                : 0.9787
+441. loh                  : 0.9785
+442. ganjar               : 0.9718
+443. aman                 : 0.9714
+444. masing               : 0.9713
+445. belum                : 0.9679
+446. cok                  : 0.9672
+447. sejahtera            : 0.9654
+448. bagi                 : 0.9641
+449. sedia                : 0.9637
+450. periksa              : 0.9624
+451. miskin               : 0.9624
+452. hastag               : 0.9601
+453. bangkit              : 0.9593
+454. tetep                : 0.9581
+455. bagus                : 0.9567
+456. diem                 : 0.9542
+457. bodoh                : 0.9514
+458. garuda               : 0.9478
+459. pro                  : 0.9466
+460. ikan                 : 0.9446
+461. wowo                 : 0.9368
+462. kagak                : 0.9356
+463. knapa                : 0.9302
+464. diskon               : 0.9296
+465. nkri                 : 0.9229
+466. ortu                 : 0.9215
+467. daerah               : 0.9184
+468. loe                  : 0.9169
+469. gerak                : 0.9104
+470. instan               : 0.9096
+471. selesai              : 0.9085
+472. cuman                : 0.9075
+473. kesibukanya          : 0.9043
+474. justice              : 0.9043
+475. lgii                 : 0.9043
+476. buka                 : 0.9032
+477. pesan                : 0.8984
+478. warga                : 0.8981
+479. anis                 : 0.8980
+480. kyk                  : 0.8971
+481. mahabodo             : 0.8926
+482. jujur                : 0.8923
+483. mahasiwanya          : 0.8912
+484. lekas                : 0.8909
+485. ttp                  : 0.8908
+486. sukatani             : 0.8895
+487. rasa                 : 0.8893
+488. proses               : 0.8791
+489. sumpah               : 0.8778
+490. sibuk                : 0.8778
+491. kocak                : 0.8749
+492. gabah                : 0.8734
+493. pdhl                 : 0.8730
+494. lantik               : 0.8725
+495. biarin               : 0.8616
+496. jga                  : 0.8597
+497. pantes               : 0.8596
+498. kader                : 0.8589
+499. gambar               : 0.8546
+500. maksud               : 0.8532
+501. ajar                 : 0.8517
+502. rubah                : 0.8511
+503. tenang               : 0.8507
+504. hamasiswa            : 0.8499
+505. bingung              : 0.8470
+506. kucil                : 0.8466
+507. tambahin             : 0.8463
+508. tumbang              : 0.8461
+509. mertua               : 0.8461
+510. bos                  : 0.8456
+511. dalang               : 0.8425
+512. mas                  : 0.8425
+513. poin                 : 0.8403
+514. gen                  : 0.8391
+515. gaji                 : 0.8370
+516. laut                 : 0.8361
+517. pagar                : 0.8361
+518. bkn                  : 0.8338
+519. apa                  : 0.8325
+520. wajib                : 0.8282
+521. sengaja              : 0.8269
+522. wujud                : 0.8236
+523. aneh                 : 0.8234
+524. boss                 : 0.8207
+525. heboh                : 0.8199
+526. kmrn                 : 0.8180
+527. pasti                : 0.8175
+528. kocakkk              : 0.8167
+529. atur                 : 0.8156
+530. hrga                 : 0.8131
+531. makmur               : 0.8107
+532. kicep                : 0.8076
+533. mah                  : 0.8046
+534. tengah               : 0.8038
+535. isi                  : 0.8033
+536. perlu                : 0.8030
+537. gerinda              : 0.8030
+538. maaf                 : 0.8022
+539. buru                 : 0.8009
+540. insha                : 0.7948
+541. insya                : 0.7948
+542. berfikir             : 0.7915
+543. suatu                : 0.7865
+544. president            : 0.7823
+545. kkn                  : 0.7823
+546. jilid                : 0.7800
+547. sulit                : 0.7783
+548. lahir                : 0.7779
+549. sah                  : 0.7760
+550. stop                 : 0.7726
+551. pahlawan             : 0.7720
+552. kampus               : 0.7709
+553. wel                  : 0.7628
+554. damai                : 0.7595
+555. kabut                : 0.7587
+556. rata                 : 0.7584
+557. ngomong              : 0.7574
+558. kpk                  : 0.7555
+559. kopi                 : 0.7543
+560. oposisi              : 0.7471
+561. tanya                : 0.7467
+562. dungu                : 0.7467
+563. das                  : 0.7460
+564. tabrak               : 0.7460
+565. mahasiswamabarr      : 0.7419
+566. injak                : 0.7419
+567. lucuuuuuuu           : 0.7419
+568. lima                 : 0.7419
+569. ucap                 : 0.7403
+570. karna                : 0.7402
+571. ilmu                 : 0.7397
+572. betul                : 0.7378
+573. semenjak             : 0.7354
+574. pasar                : 0.7350
+575. santai               : 0.7300
+576. wooiii               : 0.7273
+577. loker                : 0.7273
+578. joko                 : 0.7273
+579. lewat                : 0.7248
+580. biaya                : 0.7247
+581. ladi                 : 0.7233
+582. konten               : 0.7227
+583. mantan               : 0.7190
+584. penuh                : 0.7181
+585. komennya             : 0.7138
+586. gudang               : 0.7137
+587. rasain               : 0.7136
+588. subsidi              : 0.7133
+589. air                  : 0.7131
+590. makassar             : 0.7098
+591. kent                 : 0.7071
+592. liandi               : 0.7071
+593. macet                : 0.7071
+594. kabarin              : 0.7064
+595. thn                  : 0.7029
+596. cerita               : 0.7009
+597. tapi                 : 0.7006
+598. kurang               : 0.6971
+599. intonasi             : 0.6953
+600. aje                  : 0.6917
+601. idup                 : 0.6915
+602. jayabaya             : 0.6862
+603. keinget              : 0.6850
+604. ekonomi              : 0.6832
+605. masadepan            : 0.6832
+606. undangundang         : 0.6831
+607. bawah                : 0.6804
+608. reformasi            : 0.6798
+609. lantas               : 0.6798
+610. ikn                  : 0.6791
+611. ntar                 : 0.6788
+612. justru               : 0.6760
+613. sukses               : 0.6728
+614. sempat               : 0.6721
+615. jokowidodo           : 0.6681
+616. lee                  : 0.6664
+617. jepang               : 0.6658
+618. jare                 : 0.6653
+619. males                : 0.6653
+620. main                 : 0.6631
+621. habib                : 0.6631
+622. nyaman               : 0.6630
+623. giat                 : 0.6606
+624. korutt               : 0.6584
+625. macam                : 0.6584
+626. kaos                 : 0.6578
+627. lain                 : 0.6561
+628. sudut                : 0.6556
+629. gamau                : 0.6531
+630. kewarganegaraan      : 0.6530
+631. kmren                : 0.6514
+632. media                : 0.6509
+633. alih                 : 0.6468
+634. hahahaha             : 0.6455
+635. mlarat               : 0.6448
+636. angin                : 0.6444
+637. foya                 : 0.6434
+638. waduh                : 0.6423
+639. live                 : 0.6402
+640. mahasiswakuliah      : 0.6397
+641. negri                : 0.6363
+642. siap                 : 0.6360
+643. makanya              : 0.6331
+644. indoensia            : 0.6316
+645. iya                  : 0.6312
+646. plis                 : 0.6308
+647. ayem                 : 0.6308
+648. aksksks              : 0.6305
+649. omon                 : 0.6289
+650. ubur                 : 0.6289
+651. orasi                : 0.6235
+652. mega                 : 0.6233
+653. makas                : 0.6191
+654. klen                 : 0.6186
+655. malem                : 0.6184
+656. viral                : 0.6178
+657. teriak               : 0.6172
+658. pura                 : 0.6137
+659. line                 : 0.6123
+660. indonesiatapi        : 0.6117
+661. segala               : 0.6109
+662. hebat                : 0.6096
+663. mancing              : 0.6078
+664. ages                 : 0.6077
+665. tpi                  : 0.6074
+666. adu                  : 0.6057
+667. terjun               : 0.6056
+668. sperti               : 0.6022
+669. bidang               : 0.6013
+670. hak                  : 0.5994
+671. generasi             : 0.5991
+672. hampir               : 0.5987
+673. joget                : 0.5979
+674. grtis                : 0.5971
+675. sana                 : 0.5949
+676. vouchernya           : 0.5936
+677. iblis                : 0.5936
+678. terlalu              : 0.5933
+679. hati                 : 0.5933
+680. laliga               : 0.5924
+681. wasit                : 0.5924
+682. bnyk                 : 0.5905
+683. dagang               : 0.5890
+684. kabul                : 0.5889
+685. jurus                : 0.5882
+686. kawan                : 0.5882
+687. kaltim               : 0.5882
+688. pikirin              : 0.5873
+689. kau                  : 0.5844
+690. adik                 : 0.5833
+691. haha                 : 0.5825
+692. aplg                 : 0.5822
+693. hard                 : 0.5812
+694. manis                : 0.5809
+695. guling               : 0.5792
+696. adat                 : 0.5789
+697. again                : 0.5782
+698. klasifikasi          : 0.5764
+699. tekan                : 0.5758
+700. kelola               : 0.5723
+701. selamat              : 0.5708
+702. miris                : 0.5663
+703. lemah                : 0.5654
+704. informasi            : 0.5628
+705. halhal               : 0.5619
+706. merah                : 0.5607
+707. kelak                : 0.5587
+708. kmpang               : 0.5585
+709. warung               : 0.5545
+710. lancar               : 0.5542
+711. iku                  : 0.5531
+712. curiga               : 0.5524
+713. terima               : 0.5522
+714. luhut                : 0.5521
+715. mampu                : 0.5493
+716. usik                 : 0.5469
+717. ngerasa              : 0.5439
+718. qau                  : 0.5430
+719. woiiii               : 0.5418
+720. mohon                : 0.5407
+721. kritis               : 0.5381
+722. akhirat              : 0.5366
+723. ide                  : 0.5353
+724. janggal              : 0.5301
+725. cipta                : 0.5296
+726. diri                 : 0.5281
+727. belit                : 0.5277
+728. lebaran              : 0.5263
+729. weehh                : 0.5263
+730. nyari                : 0.5187
+731. gtu                  : 0.5155
+732. tebak                : 0.5149
+733. kait                 : 0.5123
+734. msh                  : 0.5116
+735. hasut                : 0.5099
+736. keras                : 0.5094
+737. tinggi               : 0.5072
+738. jogetpilihan         : 0.5060
+739. manfaat              : 0.4996
+740. manusia              : 0.4996
+741. klarifikasi          : 0.4989
+742. wae                  : 0.4975
+743. hujan                : 0.4975
+744. kartini              : 0.4958
+745. woyyy                : 0.4947
+746. lampu                : 0.4933
+747. liar                 : 0.4929
+748. inovasibuat          : 0.4926
+749. fungsi               : 0.4925
+750. tanpa                : 0.4925
+751. keluarga             : 0.4876
+752. komenannya           : 0.4861
+753. adalahh              : 0.4855
+754. sisi                 : 0.4849
+755. nikmatin             : 0.4836
+756. ujianya              : 0.4816
+757. maqom                : 0.4816
+758. hasti                : 0.4814
+759. lepas                : 0.4814
+760. kabar                : 0.4785
+761. standar              : 0.4767
+762. kesini               : 0.4704
+763. jirt                 : 0.4670
+764. kagum                : 0.4626
+765. teman                : 0.4616
+766. luar                 : 0.4592
+767. kabinet              : 0.4587
+768. ugalugalan           : 0.4560
+769. koordinator          : 0.4513
+770. herianto             : 0.4513
+771. kaliann              : 0.4491
+772. lawakk               : 0.4491
+773. pnting               : 0.4487
+774. jiaellah             : 0.4472
+775. lalu                 : 0.4466
+776. kenpa                : 0.4438
+777. dpt                  : 0.4436
+778. institusi            : 0.4436
+779. wkwkwkwk             : 0.4422
+780. lelah                : 0.4416
+781. harta                : 0.4416
+782. maen                 : 0.4414
+783. isilop               : 0.4376
+784. kobok                : 0.4367
+785. fokus                : 0.4361
+786. jernih               : 0.4335
+787. katanyaa             : 0.4335
+788. jng                  : 0.4335
+789. mahasiswaa           : 0.4335
+790. komplot              : 0.4275
+791. contoh               : 0.4270
+792. bela                 : 0.4240
+793. woy                  : 0.4221
+794. kelaperan            : 0.4221
+795. hahahahah            : 0.4221
+796. wayang               : 0.4217
+797. wkw                  : 0.4217
+798. diam                 : 0.4207
+799. resiko               : 0.4206
+800. komplen              : 0.4203
+801. manjadi              : 0.4173
+802. kekacawan            : 0.4159
+803. hadehh               : 0.4118
+804. gundala              : 0.4108
+805. kuping               : 0.4105
+806. janganx              : 0.4105
+807. guwe                 : 0.4105
+808. kompas               : 0.4101
+809. koar                 : 0.4051
+810. digit                : 0.4024
+811. like                 : 0.3995
+812. lokal                : 0.3985
+813. kamis                : 0.3985
+814. akal                 : 0.3978
+815. akut                 : 0.3971
+816. anggap               : 0.3967
+817. kuat                 : 0.3952
+818. iniaku               : 0.3952
+819. hasto                : 0.3938
+820. kisruh               : 0.3938
+821. ajaa                 : 0.3908
+822. mamak                : 0.3887
+823. ajak                 : 0.3887
+824. kuku                 : 0.3869
+825. level                : 0.3857
+826. janji                : 0.3850
+827. bahkan               : 0.3804
+828. sering               : 0.3798
+829. bolos                : 0.3798
+830. indah                : 0.3779
+831. niat                 : 0.3777
+832. chan                 : 0.3748
+833. lambat               : 0.3731
+834. pandang              : 0.3721
+835. kotorny              : 0.3719
+836. mahalin              : 0.3712
+837. jelek                : 0.3702
+838. iningeri             : 0.3659
+839. lindung              : 0.3655
+840. hehen                : 0.3648
+841. well                 : 0.3641
+842. win                  : 0.3550
+843. kmn                  : 0.3513
+844. pertama              : 0.3440
+845. literasi             : 0.3438
+846. langgar              : 0.3438
+847. suap                 : 0.3436
+848. kantor               : 0.3416
+849. lapor                : 0.3416
+850. malan                : 0.3395
+851. jago                 : 0.3395
+852. manja                : 0.3395
+853. ini                  : 0.3382
+854. kebal                : 0.3382
+855. hut                  : 0.3378
+856. putus                : 0.3367
+857. hahaha               : 0.3317
+858. macan                : 0.3289
+859. kini                 : 0.3238
+860. kapasitas            : 0.3238
+861. influencer           : 0.3225
+862. lgi                  : 0.3225
+863. karnaa               : 0.3224
+864. jelass               : 0.3224
+865. knapaa               : 0.3224
+866. koruptortolong       : 0.3224
+867. jawaabb              : 0.3224
+868. jogetin              : 0.3224
+869. adalahopini          : 0.3217
+870. malas                : 0.3217
+871. indefenden           : 0.3205
+872. liput                : 0.3205
+873. vote                 : 0.3193
+874. labuh                : 0.3191
+875. infrastruktur        : 0.3191
+876. kmaren               : 0.3165
+877. jurdil               : 0.3165
+878. keren                : 0.3156
+879. inisemoga            : 0.3151
+880. jidayah              : 0.3151
+881. kitaliat             : 0.3151
+882. kudeta               : 0.3150
+883. gunay                : 0.3150
+884. lele                 : 0.3144
+885. jagal                : 0.3136
+886. lantang              : 0.3108
+887. manabukti            : 0.3093
+888. hitam                : 0.3068
+889. kepolian             : 0.3062
+890. jahat                : 0.3050
+891. komplain             : 0.3042
+892. keti                 : 0.3022
+893. jasa                 : 0.3022
+894. klompok              : 0.3003
+895. hnya                 : 0.3003
+896. jawab                : 0.2946
+897. wkwkwkw              : 0.2946
+898. mang                 : 0.2946
+899. kerna                : 0.2936
+900. ajafikirkn           : 0.2936
+901. asing                : 0.2912
+902. api                  : 0.2912
+903. koreksi              : 0.2892
+904. komunis              : 0.2874
+905. agama                : 0.2874
+906. hdeh                 : 0.2858
+907. logika               : 0.2858
+908. kaki                 : 0.2855
+909. inget                : 0.2839
+910. akademisi            : 0.2827
+911. iman                 : 0.2827
+912. lainbukan            : 0.2810
+913. jatuh                : 0.2810
+914. mahasewayang         : 0.2810
+915. vido                 : 0.2796
+916. ajh                  : 0.2796
+917. konyol               : 0.2795
+918. agak                 : 0.2795
+919. alagh                : 0.2789
+920. aktivis              : 0.2789
+921. gus                  : 0.2776
+922. larang               : 0.2772
+923. lgsg                 : 0.2772
+924. kertas               : 0.2771
+925. kendali              : 0.2771
+926. kalimantan           : 0.2762
+927. jawa                 : 0.2762
+928. ibukota              : 0.2762
+929. lokasi               : 0.2745
+930. lampiasin            : 0.2732
+931. jajah                : 0.2732
+932. alam                 : 0.2692
+933. maksimal             : 0.2692
+934. lowong               : 0.2692
+935. kompak               : 0.2679
+936. ketidakadilan        : 0.2679
+937. klau                 : 0.2636
+938. ktpgaji              : 0.2634
+939. jam                  : 0.2634
+940. gizi                 : 0.2620
+941. kotor                : 0.2601
+942. branding             : 0.2601
+943. mangkas              : 0.2596
+944. inisial              : 0.2596
+945. kerjasama            : 0.2577
+946. manut                : 0.2577
+947. gtuuuuuu             : 0.2577
+948. itu                  : 0.2565
+949. kebawahcontoh        : 0.2565
+950. krisis               : 0.2565
+951. krj                  : 0.2565
+952. keluargaini          : 0.2565
+953. lesuskrg             : 0.2565
+954. mahdi                : 0.2522
+955. kedzaliman           : 0.2522
+956. imam                 : 0.2522
+957. haram                : 0.2464
+958. hrganya              : 0.2418
+959. hrg                  : 0.2418
+960. libur                : 0.2410
+961. kayu                 : 0.2410
+962. istiqomah            : 0.2408
+963. makna                : 0.2408
+964. video                : 0.2308
+965. ketika               : 0.2243
+966. heyy                 : 0.2243
+967. konoha               : 0.2243
+968. jiwa                 : 0.2220
+969. gelintir             : 0.2220
+970. hussein              : 0.2091
+971. almgusdur            : 0.2091
+972. saddam               : 0.2091
+973. mak                  : 0.2032
+974. wajar                : 0.2032
+975. khawatir             : 0.1947
+976. mamah                : 0.1874
+977. mama                 : 0.1874
+978. woakwkkkwkw          : 0.1874
+979. jajan                : 0.1874
+980. ika                  : 0.1861
+981. kualitas             : 0.1853
+982. james                : 0.1853
+983. layak                : 0.1853
+984. kayk                 : 0.1853
+985. lbih                 : 0.1842
+986. lngsng               : 0.1842
+987. hilngkan             : 0.1842
+988. manipulasi           : 0.1842
+989. krna                 : 0.1842
+990. kaji                 : 0.1731
+991. kompor               : 0.1456
+992. konslet              : 0.1456
+993. madam                : 0.1456
+994. krena                : 0.1456
+995. kondisi              : 0.1301
+996. hadir                : 0.1301
+997. hadap                : 0.1110
+998. jerit                : 0.1110
+999. kpd                  : 0.1110
+1000. leluhur              : 0.1110

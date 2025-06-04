@@ -1,0 +1,15 @@
+STATISTIK UMUM ANALISIS TEKS
+========================================
+
+Total Komentar: 996
+Total Kata Unik (setelah preprocessing): 1000
+Rata-rata panjang komentar: 51.04 karakter
+Komentar terpendek: 1 karakter
+Komentar terpanjang: 1109 karakter
+Rata-rata kata per komentar (setelah preprocessing): 5.24
+
+========================================
+DISTRIBUSI SENTIMEN:
+- Netral: 975 (97.89%)
+- Negatif: 11 (1.10%)
+- Positif: 10 (1.00%)

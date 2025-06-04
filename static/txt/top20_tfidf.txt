@@ -1,0 +1,29 @@
+20 KATA TERATAS BERDASARKAN SKOR TF-IDF
+==================================================
+
+ 1. gelap                : 26.4788
+ 2. indonesia            : 26.2786
+ 3. demo                 : 24.9118
+ 4. mahasiswa            : 22.7058
+ 5. rakyat               : 17.3453
+ 6. prabowo              : 16.7501
+ 7. mahasewa             : 16.5592
+ 8. ampas                : 14.8740
+ 9. negara               : 14.3404
+10. aset                 : 14.1836
+11. jadi                 : 13.6882
+12. mau                  : 11.7767
+13. semua                : 10.6776
+14. presiden             : 10.0517
+15. sama                 : 9.0727
+16. udah                 : 9.0655
+17. gin                  : 8.8451
+18. takut                : 8.4717
+19. dulu                 : 7.9972
+20. perintah             : 7.5143
+
+==================================================
+KETERANGAN:
+- TF-IDF (Term Frequency-Inverse Document Frequency)
+- Semakin tinggi skor, semakin penting kata tersebut
+- Kata sudah melalui proses stemming dan penghapusan stopwords
