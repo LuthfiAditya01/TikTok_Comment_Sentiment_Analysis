@@ -10,16 +10,21 @@ import seaborn as sns
 import os
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+from tqdm import tqdm
+tqdm.pandas()  # Inisialisasi tqdm dengan pandas
 
 # Buat folder jika belum ada
 os.makedirs('static/txt', exist_ok=True)
 os.makedirs('static/img', exist_ok=True)
 
 # Initialize Sastrawi stemmer dan stopword remover
+print("Initializing Sastrawi stemmer...")
 factory = StemmerFactory()
 stemmer = factory.create_stemmer()
+print("Sastrawi stemmer initialized")
 
 # Buat stopword remover
+print("Initializing stopword remover...")
 stop_factory = StopWordRemoverFactory()
 stopword = stop_factory.create_stop_word_remover()
 
@@ -39,11 +44,20 @@ additional_stopwords = [
     'kurang', 'sangat', 'amat', 'sekali', 'banget', 'bgt', 'ga', 'gak', 'nggak',
     'tidak', 'tak', 'bukan', 'jangan', 'jgn', 'jgr', 'ada', 'aja', 'lho', 'kok',
     'sih', 'dong', 'deh', 'kan', 'ya', 'yuk', 'gimana', 'bgmn', 'kenapa', 'knp',
-    'kapan', 'dimana', 'dmn', 'siapa', 'apa', 'mana', 'bagaimana', 'mengapa'
+    'kapan', 'dimana', 'dmn', 'siapa', 'apa', 'mana', 'bagaimana', 'mengapa',
+    'jadi', 'aset', 'mau', 'udah', 'sama', 'buat', 'gua', 'ikut', 'kalo', 'dah',
+    'bang', 'wkwk', 'ama', 'udh', 'tuh', 'nih', 'kira', 'bro', 'anj', 'kayak', 'pak', 'gin',
+    'makin', 'dulu', 'gin'
 ]
 
+# Hapus duplikat dari additional_stopwords
+additional_stopwords = list(set(additional_stopwords))
+
+print("Loading data...")
 # 1) Baca data
 df = pd.read_csv('indonesia gelap.csv')
+total_comments = len(df)
+print(f"Data read successfully. Total comments: {total_comments}")
 
 # 2) Fungsi untuk membersihkan teks
 def clean_text(text):
@@ -84,6 +98,7 @@ def clean_text(text):
     
     return text
 
+print("Processing comments...")
 # 3) Fungsi untuk analisis sentimen
 def get_sentiment(text):
     # Bersihkan teks
@@ -101,19 +116,26 @@ def get_sentiment(text):
     else:
         return 'netral'
 
-# 4) Terapkan analisis sentimen
-df['label'] = df['text'].apply(get_sentiment)
+# 4) Terapkan analisis sentimen dengan progress bar
+print(f"Analyzing sentiments for {total_comments} comments...")
+df['label'] = df['text'].progress_apply(get_sentiment)
+print("Sentiment analysis completed")
 
 # 5) Analisis Cosine Similarity
-# Bersihkan semua teks
-df['cleaned_text'] = df['text'].apply(clean_text)
+print(f"Cleaning text for cosine similarity ({total_comments} comments)...")
+df['cleaned_text'] = df['text'].progress_apply(clean_text)
+print("Text cleaning completed")
 
 # Buat TF-IDF vectorizer
+print("Creating TF-IDF matrix...")
 tfidf = TfidfVectorizer(max_features=1000)
 tfidf_matrix = tfidf.fit_transform(df['cleaned_text'])
+print("TF-IDF vectorizer created")
 
 # Hitung cosine similarity
+print("Calculating cosine similarity...")
 cosine_sim = cosine_similarity(tfidf_matrix)
+print("Cosine similarity calculated")
 
 # 6) Visualisasi Cosine Similarity
 plt.figure(figsize=(10,8))
@@ -124,6 +146,7 @@ plt.ylabel('Index Komentar')
 plt.tight_layout()
 plt.savefig('static/img/cosine_similarity.png')
 plt.close()
+print("Cosine similarity plot saved in 'static/img/cosine_similarity.png'")
 
 # 7) Cari komentar yang paling mirip dan simpan ke file txt
 def find_similar_comments(comment_idx, n=5):
@@ -143,7 +166,6 @@ def find_similar_comments(comment_idx, n=5):
 # Buat file txt untuk menyimpan hasil
 with open('static/txt/cosine_similarity_results.txt', 'w', encoding='utf-8') as f:
     # Analisis untuk semua komentar
-    total_comments = len(df)
     f.write(f"Total Komentar: {total_comments}\n")
     
     for comment_idx in range(total_comments):
@@ -166,8 +188,8 @@ with open('static/txt/cosine_similarity_results.txt', 'w', encoding='utf-8') as 
             print(f"Progress: {comment_idx + 1}/{total_comments} komentar telah diproses")
 
 # Tampilkan pesan selesai
-print("\nHasil analisis cosine similarity telah disimpan ke 'static/txt/cosine_similarity_results.txt'")
-print(f"Total komentar yang dianalisis: {total_comments}")
+print("Cosine similarity results saved in 'static/txt/cosine_similarity_results.txt'")
+print(f"Total comment analyzed: {total_comments}")
 
 # 8) Visualisasi lainnya
 # Distribusi Sentimen
@@ -180,6 +202,7 @@ plt.ylabel('Jumlah Komentar')
 plt.tight_layout()
 plt.savefig('static/img/distribusi_sentimen.png')
 plt.close()
+print("Distribusi sentimen plot saved")
 
 # Simpan distribusi sentimen ke file txt
 with open('static/txt/distribusi_sentimen.txt', 'w', encoding='utf-8') as f:
@@ -204,7 +227,7 @@ with open('static/txt/distribusi_sentimen.txt', 'w', encoding='utf-8') as f:
             f.write(f"{i}. {komentar}\n")
         f.write(f"\n(Menampilkan 10 dari {sentimen_counts[sentimen]} komentar {sentimen})\n")
 
-print("Distribusi sentimen telah disimpan ke 'static/txt/distribusi_sentimen.txt'")
+print("Distribusi sentimen results saved in 'static/txt/distribusi_sentimen.txt'")
 
 # Word Cloud
 # Buat TF-IDF vectorizer baru untuk wordcloud
@@ -221,6 +244,7 @@ plt.axis('off')
 plt.tight_layout()
 plt.savefig('static/img/wordcloud_tfidf.png')
 plt.close()
+print("Wordcloud plot saved")
 
 # Simpan semua kata TF-IDF ke file txt
 with open('static/txt/semua_kata_tfidf.txt', 'w', encoding='utf-8') as f:
@@ -234,6 +258,7 @@ with open('static/txt/semua_kata_tfidf.txt', 'w', encoding='utf-8') as f:
         f.write(f"{rank:3d}. {kata:<20} : {skor:.4f}\n")
 
 print("Semua kata TF-IDF telah disimpan ke 'static/txt/semua_kata_tfidf.txt'")
+print("Semua kata TF-IDF results saved")
 
 # Bar Chart 20 Kata TF-IDF Teratas
 top20 = scores_wordcloud.sort_values(ascending=False).head(20)
@@ -246,6 +271,7 @@ plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 plt.savefig('static/img/top20_tfidf.png')
 plt.close()
+print("Top 20 TF-IDF plot saved")
 
 # Simpan 20 kata teratas TF-IDF ke file txt
 with open('static/txt/top20_tfidf.txt', 'w', encoding='utf-8') as f:
@@ -262,6 +288,7 @@ with open('static/txt/top20_tfidf.txt', 'w', encoding='utf-8') as f:
     f.write("- Kata sudah melalui proses stemming dan penghapusan stopwords\n")
 
 print("Top 20 kata TF-IDF telah disimpan ke 'static/txt/top20_tfidf.txt'")
+print("Top 20 kata TF-IDF results saved")
 
 # Tambahan: Simpan statistik umum
 with open('static/txt/statistik_umum.txt', 'w', encoding='utf-8') as f:

@@ -6,17 +6,19 @@
   <link rel="shortcut icon" href="static/img/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans leading-relaxed p-6">
-    <h1 class="text-3xl font-bold text-gray-900 mb-4">Analisis Sentimen Komentar</h1>
-    <p class="mb-6">
+    <h1 class="text-5xl font-bold text-gray-900 mb-4">Analisis Sentimen Komentar</h1>
+    <p class="mb-6 text-lg">
       Halaman ini menampilkan hasil analisis teks komentar publik menggunakan pendekatan TF-IDF, 
       lengkap dengan visualisasi distribusi sentimen, word cloud, dan daftar kata teratas.
     </p>
   
-    <div class="bg-white rounded-lg shadow-md p-6 mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">1. Distribusi Sentimen</h2>
+    <div data-aos="fade-up" class="bg-white rounded-lg shadow-md p-6 mb-10">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">1. Distribusi Sentimen</h2>
       <div class="flex justify-center mb-4">
         <canvas id="distribusiSentimenChart" width="400" height="200"></canvas>
       </div>
@@ -27,8 +29,8 @@
       </p>
     </div>
   
-    <div class="bg-white rounded-lg shadow-md p-6 mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">2. Word Cloud TF-IDF (Unigram)</h2>
+    <div data-aos="fade-up" class="bg-white rounded-lg shadow-md p-6 mb-10">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">2. Word Cloud TF-IDF (Unigram)</h2>
       <div class="flex justify-center mb-4">
         <img src="static/img/wordcloud_tfidf.png" alt="Word Cloud TF-IDF"
              class="max-w-full border border-gray-200 rounded-md bg-white p-2" />
@@ -40,8 +42,8 @@
       </p>
     </div>
   
-    <div class="bg-white rounded-lg shadow-md p-6 mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">3. 20 Kata Unigram Teratas berdasarkan TF-IDF</h2>
+    <div data-aos="fade-up" class="bg-white rounded-lg shadow-md p-6 mb-10">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">3. 20 Kata Unigram Teratas berdasarkan TF-IDF</h2>
       <div class="flex justify-center mb-4">
         <canvas id="top20TfidfChart" width="600" height="400"></canvas>
       </div>
@@ -52,8 +54,8 @@
       </p>
     </div>
   
-    <div class="bg-white rounded-lg shadow-md p-6 mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">4. Cosine Similarity Report</h2>
+    <div data-aos="fade-up" class="bg-white rounded-lg shadow-md p-6 mb-10">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-4">4. Cosine Similarity Report</h2>
       <div class="flex justify-center mb-4">
         <img src="static/img/cosine_similarity.png" alt="Cosine Similarity Report"
              class="max-w-full border border-gray-200 rounded-md bg-white p-2">
@@ -68,6 +70,15 @@
     </footer>
 
     <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            offset: 100,
+            easing: 'ease-in-out',
+            mirror: false,
+            anchorPlacement: 'top-bottom',
+            disable: false,
+        });
       // 1. Distribusi Sentimen Chart
       const ctx1 = document.getElementById('distribusiSentimenChart').getContext('2d');
       const distribusiSentimenChart = new Chart(ctx1, {
@@ -76,7 +87,7 @@
           labels: ['Netral', 'Positif', 'Negatif'],
           datasets: [{
             label: 'Jumlah Komentar',
-            data: [975, 15, 10],
+            data: [97.89, 1.10, 1],
             backgroundColor: ['#3B82F6', '#10B981', '#EF4444'],
             borderColor: ['#2563EB', '#059669', '#DC2626'],
             borderWidth: 1
@@ -113,10 +124,10 @@
       const top20TfidfChart = new Chart(ctx2, {
         type: 'bar',
         data: {
-          labels: ['indonesia', 'indonesia', 'di', 'yg', 'setiap', 'manajernya', 'dalam', 'yang', 'manasaja', 'ada', 'rakyat', 'prabowo', 'aja', 'kabuupaten', 'nya', 'ini', 'negara', 'jgr=gmarah', 'ga', 'dan'],
+          labels: ['indonesia', 'gelap', 'demo', 'mahasiswa','prabowo','rakyat','mahasewa','ampas','negara','semua','presiden','gin','takut','perintah','milih','hidup','makan','tuntut','kerja','banyak'],
           datasets: [{
             label: 'Skor TF-IDF',
-            data: [31, 25.5, 23, 22.5, 22, 21.5, 19.5, 18, 16, 15.5, 15.2, 15, 13.5, 13, 12.8, 12.5, 12, 11.8, 11.5, 11.2],
+            data: [27.7096, 27.6496, 26.6433, 22.9754, 17.6900, 17.4957, 17.1985, 17.1985, 17.0251, 14.5436, 10.8321, 10.3737, 9.5876, 9.0292, 7.6814, 7.6282, 7.4595, 6.9092, 6.5023, 6.4321],
             backgroundColor: '#3B82F6',
             borderColor: '#2563EB',
             borderWidth: 1
@@ -124,7 +135,7 @@
         },
         options: {
           responsive: true,
-          indexAxis: 'y',
+          indexAxis: 'x',
           plugins: {
             title: {
               display: true,
@@ -133,16 +144,16 @@
           },
           scales: {
             x: {
+              title: {
+                display: true,
+                text: 'Kata'
+              }
+            },
+            y: {
               beginAtZero: true,
               title: {
                 display: true,
                 text: 'Skor TF-IDF'
-              }
-            },
-            y: {
-              title: {
-                display: true,
-                text: 'Kata'
               }
             }
           }

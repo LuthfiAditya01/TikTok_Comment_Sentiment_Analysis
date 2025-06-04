@@ -1,26 +1,26 @@
 20 KATA TERATAS BERDASARKAN SKOR TF-IDF
 ==================================================
 
- 1. gelap                : 26.4788
- 2. indonesia            : 26.2786
- 3. demo                 : 24.9118
- 4. mahasiswa            : 22.7058
- 5. rakyat               : 17.3453
- 6. prabowo              : 16.7501
- 7. mahasewa             : 16.5592
- 8. ampas                : 14.8740
- 9. negara               : 14.3404
-10. aset                 : 14.1836
-11. jadi                 : 13.6882
-12. mau                  : 11.7767
-13. semua                : 10.6776
-14. presiden             : 10.0517
-15. sama                 : 9.0727
-16. udah                 : 9.0655
-17. gin                  : 8.8451
-18. takut                : 8.4717
-19. dulu                 : 7.9972
-20. perintah             : 7.5143
+ 1. indonesia            : 27.7096
+ 2. gelap                : 27.6496
+ 3. demo                 : 26.6433
+ 4. mahasiswa            : 22.9754
+ 5. prabowo              : 17.6900
+ 6. rakyat               : 17.4957
+ 7. mahasewa             : 17.1985
+ 8. ampas                : 17.0251
+ 9. negara               : 14.5436
+10. semua                : 10.8321
+11. presiden             : 10.3737
+12. gin                  : 9.5876
+13. takut                : 9.0292
+14. perintah             : 7.6814
+15. milih                : 7.6282
+16. hidup                : 7.4595
+17. makan                : 6.9092
+18. tuntut               : 6.5023
+19. kerja                : 6.4321
+20. banyak               : 6.4255
 
 ==================================================
 KETERANGAN:
