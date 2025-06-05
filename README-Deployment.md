@@ -24,10 +24,10 @@
    - Vercel akan auto-detect sebagai Python project
 
 3. **Configure Build Settings**
-   - Framework Preset: `Other`
-   - Build Command: `pip install -r requirements-vercel.txt`
-   - Output Directory: `.`
-   - Install Command: (biarkan kosong)
+   - Framework Preset: `Other` (Vercel akan auto-detect Flask)
+   - Build Command: (biarkan kosong - auto-detect)
+   - Output Directory: (biarkan kosong - auto-detect)
+   - Install Command: (biarkan kosong - auto-detect)
 
 ### Metode 2: Deploy via Vercel CLI
 
@@ -50,37 +50,25 @@
 
 ```
 project/
-├── app.py                 # Main Flask app
-├── vercel.json           # Vercel configuration
-├── requirements-vercel.txt # Minimal dependencies
+├── app.py                    # Main Flask app
+├── requirements.txt          # Minimal dependencies  
+├── .vercelignore            # Files to exclude
 ├── templates/
-│   └── index.html        # HTML template
+│   └── index.html           # HTML template
 ├── static/
-│   ├── img/             # Images
+│   ├── img/                # Images
 │   └── ...
-└── README-Deployment.md  # This file
+└── README-Deployment.md     # This file
 ```
 
 ## ⚙️ File Konfigurasi
 
-### vercel.json
-```json
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "./app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "./app.py"
-    }
-  ]
-}
-```
+### Auto-Detection (No vercel.json needed)
+Vercel akan otomatis mendeteksi:
+- Python Flask application dari `app.py`
+- Dependencies dari `requirements.txt`
+- Static files dari folder `static/`
+- Templates dari folder `templates/`
 
 ### requirements-vercel.txt
 File ini berisi dependency minimal untuk deployment yang lebih cepat.
