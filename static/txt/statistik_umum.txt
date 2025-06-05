@@ -10,6 +10,6 @@ Rata-rata kata per komentar (setelah preprocessing): 4.84
 
 ========================================
 DISTRIBUSI SENTIMEN:
-- Netral: 975 (97.89%)
-- Negatif: 11 (1.10%)
-- Positif: 10 (1.00%)
+- Negatif: 444 (44.58%)
+- Netral: 413 (41.47%)
+- Positif: 139 (13.96%)

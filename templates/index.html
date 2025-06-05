@@ -9,262 +9,358 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-divider {
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+      border-radius: 2px;
+      margin: 2rem 0;
+    }
+    .chart-container {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .floating-icon {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .stats-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed p-6">
-    <h1 class="text-5xl font-bold text-gray-900 mb-4">Analisis Sentimen Komentar</h1>
-    <p class="mb-6 text-lg">
-      Halaman ini menampilkan hasil analisis teks komentar publik menggunakan pendekatan TF-IDF, 
-      lengkap dengan visualisasi distribusi sentimen, word cloud, dan daftar kata teratas.
-    </p>
+<body class="gradient-bg min-h-screen text-white font-sans leading-relaxed">
   
-    <div data-aos="fade-up" class="bg-white rounded-lg shadow-md p-6 mb-10">
-      <h2 class="text-4xl font-semibold text-gray-800 mb-4">1. Distribusi Sentimen</h2>
-      <div class="flex justify-center mb-4">
+  <!-- Header Section -->
+  <div class="container mx-auto px-6 py-12">
+    <div class="text-center mb-16" data-aos="fade-down">
+      <div class="floating-icon mb-6">
+        <i class="fas fa-chart-line text-6xl text-white opacity-80"></i>
+      </div>
+      <h1 class="text-6xl md:text-7xl font-bold mb-6 text-white">
+        Analisis Sentimen Komentar
+      </h1>
+      <div class="section-divider mx-auto w-32"></div>
+             <p class="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed mt-8">
+         Laporan komprehensif analisis sentimen komentar TikTok pada konten bertagar #IndonesiaGelap menggunakan <strong>Indonesian BERT Model</strong> dan pendekatan TF-IDF dengan visualisasi distribusi sentimen, word cloud, dan analisis kemiripan dokumen.
+       </p>
+      
+      <!-- Stats Overview -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="stats-card rounded-2xl p-6">
+          <div class="text-3xl font-bold text-white">97.89%</div>
+          <div class="text-gray-300">Komentar Netral</div>
+        </div>
+        <div class="stats-card rounded-2xl p-6">
+          <div class="text-3xl font-bold text-green-300">1.10%</div>
+          <div class="text-gray-300">Komentar Positif</div>
+        </div>
+        <div class="stats-card rounded-2xl p-6">
+          <div class="text-3xl font-bold text-red-300">1.00%</div>
+          <div class="text-gray-300">Komentar Negatif</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 1: Distribusi Sentimen -->
+    <div data-aos="fade-up" class="bg-white rounded-3xl shadow-2xl p-8 mb-12 card-hover">
+      <div class="flex items-center mb-6">
+        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+          <i class="fas fa-chart-pie text-white text-xl"></i>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient">1. Distribusi Sentimen</h2>
+      </div>
+      <div class="chart-container mb-6">
         <canvas id="distribusiSentimenChart" width="400" height="200"></canvas>
       </div>
-      <p class="text-gray-700">
-        Grafik di atas menunjukkan jumlah komentar yang dilabeli <em>positif</em> (jumlah like/upvote ≥ 10) 
-        versus <em>negatif</em> (jumlah like/upvote < 10). Dari sini, Anda dapat melihat proporsi komentar 
-        berdasarkan kriteria sederhana yang diterapkan pada kolom <code class="bg-gray-100 px-1 rounded text-sm">diggCount</code>.
-      </p>
+             <div class="bg-gray-50 rounded-2xl p-6">
+         <p class="text-gray-700 text-lg leading-relaxed">
+           <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+           Grafik di atas menunjukkan distribusi sentimen komentar yang dianalisis menggunakan <strong>Indonesian BERT Model</strong>. 
+           Model ini dilatih khusus untuk bahasa Indonesia dan memberikan akurasi yang jauh lebih baik dibandingkan 
+           metode tradisional. Analisis sentimen dilakukan secara otomatis tanpa bergantung pada threshold likes.
+         </p>
+         <div class="mt-4 p-4 bg-blue-50 rounded-xl border-l-4 border-blue-400">
+           <p class="text-sm text-blue-800">
+             <i class="fas fa-robot text-blue-600 mr-2"></i>
+             <strong>Model yang digunakan:</strong> Indonesian BERT (ayameRushia/bert-base-indonesian-1.5G-sentiment-analysis-smsa)
+           </p>
+         </div>
+       </div>
     </div>
-  
-    <div data-aos="fade-up" class="bg-white rounded-lg shadow-md p-6 mb-10">
-      <h2 class="text-4xl font-semibold text-gray-800 mb-4">2. Word Cloud TF-IDF (Unigram)</h2>
-      <div class="flex justify-center mb-4">
-        <img src="static/img/wordcloud_tfidf.png" alt="Word Cloud TF-IDF"
-             class="max-w-full border border-gray-200 rounded-md bg-white p-2" />
+
+    <!-- Section 2: Word Cloud -->
+    <div data-aos="fade-up" class="bg-white rounded-3xl shadow-2xl p-8 mb-12 card-hover">
+      <div class="flex items-center mb-6">
+        <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mr-4">
+          <i class="fas fa-cloud text-white text-xl"></i>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient">2. Word Cloud TF-IDF (Unigram)</h2>
       </div>
-      <p class="text-gray-700">
-        Word cloud ini menampilkan kata-kata yang dianggap paling "informatif" menurut skor TF-IDF 
-        (menghitung bobot per kata dalam korpus). Ukuran kata di dalam cloud berkorelasi langsung 
-        dengan total bobot TF-IDF-nya—semakin besar, semakin tinggi bobotnya.
-      </p>
+      <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 mb-6">
+        <div class="flex justify-center">
+          <img src="static/img/wordcloud_tfidf.png" alt="Word Cloud TF-IDF"
+               class="max-w-full border-2 border-gray-200 rounded-2xl bg-white p-4 shadow-lg hover:shadow-xl transition-all duration-300" />
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-6">
+        <p class="text-gray-700 text-lg leading-relaxed">
+          <i class="fas fa-magic text-purple-500 mr-2"></i>
+          Word cloud ini memvisualisasikan kata-kata dengan <strong>skor TF-IDF tertinggi</strong>. Ukuran kata berkorelasi 
+          dengan bobot informatifnya—kata yang lebih besar memiliki kontribusi yang lebih signifikan dalam membedakan dokumen. 
+          Ini membantu mengidentifikasi tema utama dalam komentar.
+        </p>
+      </div>
     </div>
-  
-    <div data-aos="fade-up" class="bg-white rounded-lg shadow-md p-6 mb-10">
-      <h2 class="text-4xl font-semibold text-gray-800 mb-4">3. 20 Kata Unigram Teratas berdasarkan TF-IDF</h2>
-      <div class="flex justify-center mb-4">
+
+    <!-- Section 3: Top 20 Words -->
+    <div data-aos="fade-up" class="bg-white rounded-3xl shadow-2xl p-8 mb-12 card-hover">
+      <div class="flex items-center mb-6">
+        <div class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mr-4">
+          <i class="fas fa-chart-bar text-white text-xl"></i>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient">3. 20 Kata Unigram Teratas berdasarkan TF-IDF</h2>
+      </div>
+      <div class="chart-container mb-6">
         <canvas id="top20TfidfChart" width="600" height="400"></canvas>
       </div>
-      <p class="text-gray-700">
-        Bar chart di atas memperlihatkan 20 kata unigram dengan nilai TF-IDF tertinggi 
-        berdasarkan seluruh dokumen. Ini membantu mengidentifikasi istilah-istilah kunci 
-        yang paling berkontribusi dalam membedakan masing-masing komentar.
-      </p>
-    </div>
-  
-    <div data-aos="fade-up" class="bg-white rounded-lg shadow-md p-6 mb-10">
-      <h2 class="text-4xl font-semibold text-gray-800 mb-4">4. Cosine Similarity Report</h2>
-      <div class="flex justify-center mb-4">
-        <img src="static/img/cosine_similarity.png" alt="Cosine Similarity Report"
-             class="max-w-full border border-gray-200 rounded-md bg-white p-2">
+      <div class="bg-gray-50 rounded-2xl p-6">
+        <p class="text-gray-700 text-lg leading-relaxed">
+          <i class="fas fa-trophy text-yellow-500 mr-2"></i>
+          Grafik batang ini menampilkan <strong>20 kata dengan nilai TF-IDF tertinggi</strong> dari seluruh korpus. 
+          Kata-kata ini merupakan istilah kunci yang paling berpengaruh dalam karakterisasi dokumen dan dapat 
+          memberikan insight tentang topik yang paling sering dibahas dalam komentar.
+        </p>
       </div>
-      <p class="text-gray-700">
-        Grafik di atas menunjukkan hasil analisis cosine similarity antar dokumen. Cosine similarity digunakan untuk mengukur kemiripan antara dua dokumen berdasarkan vektor fitur mereka. Semakin tinggi nilai cosine similarity, semakin mirip dokumen tersebut.
-      </p>
     </div>
-  
-    
 
-<footer class="bg-white rounded-lg shadow-sm m-4 dark:bg-gray-800">
-    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-around md:pt-8">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 <a href="https://github.com/LuthfiAditya01/TikTok_Comment_Sentiment_Analysis" class="hover:underline">Kelompok 3</a>. Sentimen Analisis dan Penghitungan Cosine Similarity dari Komentar kontek Tiktok untuk Konten bertagar #IndonesiaGelap.
-    <ul class="flex flex-wrap text-gray-800 items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6 text-gray-800">About</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6 text-gray-800">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline me-4 md:me-6 text-gray-800">Licensing</a>
-        </li>
-        <li>
-            <a href="#" class="hover:underline text-gray-800">Contact</a>
-        </li>
-    </ul>
+    <!-- Section 4: Cosine Similarity -->
+    <div data-aos="fade-up" class="bg-white rounded-3xl shadow-2xl p-8 mb-12 card-hover">
+      <div class="flex items-center mb-6">
+        <div class="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-xl flex items-center justify-center mr-4">
+          <i class="fas fa-project-diagram text-white text-xl"></i>
+        </div>
+        <h2 class="text-4xl font-bold text-gradient">4. Cosine Similarity Report</h2>
+      </div>
+      <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 mb-6">
+        <div class="flex justify-center">
+          <img src="static/img/cosine_similarity.png" alt="Cosine Similarity Report"
+               class="max-w-full border-2 border-gray-200 rounded-2xl bg-white p-4 shadow-lg hover:shadow-xl transition-all duration-300">
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-2xl p-6">
+        <p class="text-gray-700 text-lg leading-relaxed">
+          <i class="fas fa-calculator text-pink-500 mr-2"></i>
+          Visualisasi cosine similarity mengukur <strong>tingkat kemiripan antar dokumen</strong> berdasarkan vektor fitur TF-IDF. 
+          Nilai mendekati 1 menunjukkan kemiripan tinggi, sedangkan nilai mendekati 0 menunjukkan perbedaan yang signifikan. 
+          Analisis ini berguna untuk mengidentifikasi kluster komentar dengan konten serupa.
+        </p>
+      </div>
     </div>
-</footer>
+  </div>
 
-    <footer class="text-center text-gray-600 text-sm mt-12">
-      © 2025 Proyek Analisis Sentimen Komentar. Dibuat oleh [Nama Anda]
-    </footer>
-
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: false,
-            offset: 100,
-            easing: 'ease-out',
-            mirror: false,
-            anchorPlacement: 'top-bottom',
-            disable: false,
-        });
-      // 1. Distribusi Sentimen Chart
-      const ctx1 = document.getElementById('distribusiSentimenChart').getContext('2d');
-      const distribusiSentimenChart = new Chart(ctx1, {
-        type: 'bar',
-        data: {
-          labels: ['Netral', 'Positif', 'Negatif'],
-          datasets: [{
-            label: 'Jumlah Komentar',
-            data: [97.89, 1.10, 1],
-            backgroundColor: ['#3B82F6', '#10B981', '#EF4444'],
-            borderColor: ['#2563EB', '#059669', '#DC2626'],
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            title: {
-              display: true,
-              text: 'Distribusi Sentimen Komentar'
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              title: {
-                display: true,
-                text: 'Jumlah Komentar'
-              }
-            },
-            x: {
-              title: {
-                display: true,
-                text: 'Sentimen'
-              }
-            }
-          }
-        }
-      });
-
-      // 2. Top 20 TF-IDF Chart
-      const ctx2 = document.getElementById('top20TfidfChart').getContext('2d');
-      const top20TfidfChart = new Chart(ctx2, {
-        type: 'bar',
-        data: {
-          labels: ['indonesia', 'gelap', 'demo', 'mahasiswa','prabowo','rakyat','mahasewa','ampas','negara','semua','presiden','gin','takut','perintah','milih','hidup','makan','tuntut','kerja','banyak'],
-          datasets: [{
-            label: 'Skor TF-IDF',
-            data: [27.7096, 27.6496, 26.6433, 22.9754, 17.6900, 17.4957, 17.1985, 17.1985, 17.0251, 14.5436, 10.8321, 10.3737, 9.5876, 9.0292, 7.6814, 7.6282, 7.4595, 6.9092, 6.5023, 6.4321],
-            backgroundColor: '#3B82F6',
-            borderColor: '#2563EB',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          indexAxis: 'x',
-          plugins: {
-            title: {
-              display: true,
-              text: '20 Kata Teratas berdasarkan Skor TF-IDF'
-            }
-          },
-          scales: {
-            x: {
-              title: {
-                display: true,
-                text: 'Kata'
-              }
-            },
-            y: {
-              beginAtZero: true,
-              title: {
-                display: true,
-                text: 'Skor TF-IDF'
-              }
-            }
-          }
-        }
-      });
-
-      // 3. Cosine Similarity Heatmap (using scatter chart with point styling)
-      const ctx3 = document.getElementById('cosineSimilarityChart').getContext('2d');
+  <!-- Footer -->
+  <footer class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-t border-white border-opacity-20 mt-16">
+    <div class="container mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">Tentang Proyek</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Analisis sentimen komentar TikTok dengan hashtag #IndonesiaGelap menggunakan teknik TF-IDF dan cosine similarity.
+          </p>
+        </div>
+                 <div>
+           <h3 class="text-xl font-bold text-white mb-4">Metodologi</h3>
+           <ul class="text-gray-300 space-y-2">
+             <li><i class="fas fa-robot text-green-400 mr-2"></i>Indonesian BERT Model</li>
+             <li><i class="fas fa-check text-green-400 mr-2"></i>TF-IDF Vectorization</li>
+             <li><i class="fas fa-check text-green-400 mr-2"></i>Cosine Similarity</li>
+             <li><i class="fas fa-check text-green-400 mr-2"></i>Word Cloud Analysis</li>
+           </ul>
+         </div>
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">Quick Links</h3>
+          <ul class="text-gray-300 space-y-2">
+            <li><a href="#" class="hover:text-white transition-colors"><i class="fas fa-home mr-2"></i>Beranda</a></li>
+            <li><a href="#" class="hover:text-white transition-colors"><i class="fas fa-chart-line mr-2"></i>Analisis</a></li>
+            <li><a href="#" class="hover:text-white transition-colors"><i class="fas fa-download mr-2"></i>Download Data</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-white mb-4">Kontak Tim</h3>
+          <div class="text-gray-300">
+            <p><i class="fas fa-users mr-2"></i>Kelompok 3</p>
+            <p><i class="fas fa-envelope mr-2"></i>contact@kelompok3.com</p>
+            <div class="flex space-x-4 mt-4">
+              <a href="https://github.com/LuthfiAditya01/TikTok_Comment_Sentiment_Analysis" class="text-gray-300 hover:text-white transition-colors">
+                <i class="fab fa-github text-xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       
-      // Generate sample data for heatmap (simplified version)
-      const generateHeatmapData = () => {
-        const data = [];
-        const size = 50; // 50x50 matrix
-        
-        for (let i = 0; i < size; i++) {
-          for (let j = 0; j < size; j++) {
-            let similarity;
-            if (i === j) {
-              similarity = 1; // diagonal
-            } else {
-              // Generate some realistic similarity values
-              const distance = Math.abs(i - j);
-              similarity = Math.max(0, 1 - (distance / size) - Math.random() * 0.8);
-            }
-            
-            data.push({
-              x: i,
-              y: j,
-              v: similarity
-            });
-          }
-        }
-        return data;
-      };
+      <div class="border-t border-white border-opacity-20 pt-8 text-center">
+        <p class="text-gray-300">
+          © 2025 <a href="https://github.com/LuthfiAditya01/TikTok_Comment_Sentiment_Analysis" class="text-white hover:underline">Kelompok 3</a>. 
+          Semua hak dilindungi. Proyek Analisis Sentimen Komentar TikTok.
+        </p>
+      </div>
+    </div>
+  </footer>
 
-      const heatmapData = generateHeatmapData();
-      
-      const cosineSimilarityChart = new Chart(ctx3, {
-        type: 'scatter',
-        data: {
-          datasets: [{
-            label: 'Cosine Similarity',
-            data: heatmapData,
-            backgroundColor: function(context) {
-              const value = context.parsed.v || 0;
-              const alpha = value;
-              return `rgba(128, 0, 128, ${alpha})`;
-            },
-            borderColor: function(context) {
-              const value = context.parsed.v || 0;
-              const alpha = value;
-              return `rgba(128, 0, 128, ${alpha})`;
-            },
-            pointRadius: 3
-          }]
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 100,
+      easing: 'ease-out',
+      mirror: false,
+      anchorPlacement: 'top-bottom',
+      disable: false,
+    });
+
+    // Enhanced chart styling
+    Chart.defaults.font.family = "'Inter', 'system-ui', sans-serif";
+    Chart.defaults.font.size = 12;
+    Chart.defaults.color = '#374151';
+
+    // 1. Distribusi Sentimen Chart
+    const ctx1 = document.getElementById('distribusiSentimenChart').getContext('2d');
+    const distribusiSentimenChart = new Chart(ctx1, {
+      type: 'doughnut',
+      data: {
+        labels: ['Netral', 'Positif', 'Negatif'],
+        datasets: [{
+          label: 'Persentase Komentar',
+          data: [41.47, 13.96, 44.58],
+          backgroundColor: [
+            'linear-gradient(45deg, #3B82F6, #1D4ED8)',
+            'linear-gradient(45deg, #10B981, #059669)',
+            'linear-gradient(45deg, #EF4444, #DC2626)'
+          ],
+          borderColor: ['#ffffff'],
+          borderWidth: 2,
+          hoverOffset: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Distribusi Sentimen Komentar (%)',
+            font: { size: 14, weight: 'bold' },
+            padding: 10
+          },
+          legend: {
+            position: 'bottom',
+            labels: {
+              padding: 10,
+              usePointStyle: true,
+              font: { size: 12 }
+            }
+          }
         },
-        options: {
-          responsive: true,
-          plugins: {
+        animation: {
+          animateRotate: true,
+          animateScale: true
+        }
+      }
+    });
+
+    // 2. Top 20 TF-IDF Chart
+    const ctx2 = document.getElementById('top20TfidfChart').getContext('2d');
+    const top20TfidfChart = new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['indonesia', 'gelap', 'demo', 'mahasiswa','prabowo','rakyat','mahasewa','ampas','negara','semua','presiden','gin','takut','perintah','milih','hidup','makan','tuntut','kerja','banyak'],
+        datasets: [{
+          label: 'Skor TF-IDF',
+          data: [27.7096, 27.6496, 26.6433, 22.9754, 17.6900, 17.4957, 17.1985, 17.1985, 17.0251, 14.5436, 10.8321, 10.3737, 9.5876, 9.0292, 7.6814, 7.6282, 7.4595, 6.9092, 6.5023, 6.4321],
+          backgroundColor: function(context) {
+            const value = context.parsed.y;
+            const max = Math.max(...context.dataset.data);
+            const intensity = value / max;
+            return `rgba(59, 130, 246, ${0.6 + intensity * 0.4})`;
+          },
+          borderColor: '#3B82F6',
+          borderWidth: 2,
+          borderRadius: 6,
+          borderSkipped: false,
+        }]
+      },
+      options: {
+        responsive: true,
+        indexAxis: 'x',
+        plugins: {
+          title: {
+            display: true,
+            text: '20 Kata Teratas berdasarkan Skor TF-IDF',
+            font: { size: 16, weight: 'bold' },
+            padding: 20
+          },
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          x: {
             title: {
               display: true,
-              text: 'Cosine Similarity antar Komentar'
+              text: 'Kata',
+              font: { size: 14, weight: 'bold' }
             },
-            legend: {
+            ticks: {
+              maxRotation: 45,
+              font: { size: 12 }
+            },
+            grid: {
               display: false
             }
           },
-          scales: {
-            x: {
-              type: 'linear',
-              position: 'bottom',
-              title: {
-                display: true,
-                text: 'Index Komentar'
-              },
-              min: 0,
-              max: 49
+          y: {
+            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Skor TF-IDF',
+              font: { size: 14, weight: 'bold' }
             },
-            y: {
-              title: {
-                display: true,
-                text: 'Index Komentar'
-              },
-              min: 0,
-              max: 49
+            grid: {
+              color: 'rgba(0,0,0,0.1)'
             }
           }
+        },
+        animation: {
+          duration: 2000,
+          easing: 'easeInOutQuart'
         }
-      });
-    </script>
-  </body>
+      }
+    });
+  </script>
+</body>
 </html>

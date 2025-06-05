@@ -1,0 +1,17 @@
+INFORMASI MODEL ANALISIS SENTIMEN
+==================================================
+
+🤖 Model: Indonesian BERT
+📝 Tipe: Transformer-based Neural Network
+🎯 Akurasi: Tinggi untuk bahasa Indonesia
+🔧 Framework: HuggingFace Transformers
+🌐 Model: ayameRushia/bert-base-indonesian-1.5G-sentiment-analysis-smsa
+
+📊 Total komentar: 996
+⏱️  Waktu pemrosesan: Selesai
+
+==================================================
+DISTRIBUSI HASIL SENTIMEN:
+   Negatif: 444 komentar (44.58%)
+   Netral: 413 komentar (41.47%)
+   Positif: 139 komentar (13.96%)
