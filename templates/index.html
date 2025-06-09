@@ -87,7 +87,7 @@
       </p>
       
       <!-- Stats Overview -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12" data-aos="fade-up" data-aos-delay="200">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12" data-aos="fade-up" data-aos-delay="300">
         <div class="stats-card rounded-2xl p-4 sm:p-6">
           <div class="text-2xl sm:text-3xl font-bold text-red-300">44.58%</div>
           <div class="text-sm sm:text-base text-gray-300">Komentar Negatif</div>
@@ -131,7 +131,7 @@
     </div>
 
     <!-- Section 2: Word Cloud -->
-    <div data-aos="fade-up" class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 card-hover">
+    <div data-aos-delay="300" data-aos="fade-up" class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 card-hover">
       <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
         <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-xl flex items-center justify-center mb-3 sm:mb-0 sm:mr-4">
           <i class="fas fa-cloud text-white text-lg sm:text-xl"></i>
@@ -155,7 +155,7 @@
     </div>
 
     <!-- Section 3: Top 20 Words -->
-    <div data-aos="fade-up" class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 card-hover">
+    <div data-aos-delay="400" data-aos="fade-up" class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 card-hover">
       <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
         <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-xl flex items-center justify-center mb-3 sm:mb-0 sm:mr-4">
           <i class="fas fa-chart-bar text-white text-lg sm:text-xl"></i>
@@ -176,7 +176,7 @@
     </div>
 
     <!-- Section 4: Cosine Similarity -->
-    <div data-aos="fade-up" class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 card-hover">
+    <div data-aos-delay="400" data-aos="fade-up" class="bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 md:p-8 mb-8 sm:mb-12 card-hover">
       <div class="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
         <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-xl flex items-center justify-center mb-3 sm:mb-0 sm:mr-4">
           <i class="fas fa-project-diagram text-white text-lg sm:text-xl"></i>
@@ -224,7 +224,20 @@
           <ul class="text-gray-300 space-y-2 text-sm sm:text-base">
             <li><a href="#" class="hover:text-white transition-colors"><i class="fas fa-home mr-2"></i>Beranda</a></li>
             <li><a href="#" class="hover:text-white transition-colors"><i class="fas fa-chart-line mr-2"></i>Analisis</a></li>
-            <li><a href="#" class="hover:text-white transition-colors"><i class="fas fa-download mr-2"></i>Download Data</a></li>
+            <li class="group relative">
+              <button class="hover:text-white transition-colors flex items-center" onclick="toggleDropdown()">
+                <i class="fas fa-download mr-2"></i>Download Data
+                <i class="fas fa-chevron-down ml-1 text-xs"></i>
+              </button>
+              <div id="downloadDropdown" class="hidden absolute bottom-full left-0 mb-2 bg-white rounded-lg shadow-lg py-2 min-w-48 z-10">
+                <a href="/download/dataset" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
+                  <i class="fas fa-file-csv mr-2 text-green-500"></i>Dataset Lengkap
+                </a>
+                <a href="/download/report" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors">
+                  <i class="fas fa-comments mr-2 text-blue-500"></i>Laporan Lengkap (zip)
+                </a>
+              </div>
+            </li>
           </ul>
         </div>
         <div>
@@ -389,6 +402,22 @@
       top20TfidfChart.options.aspectRatio = window.innerWidth < 768 ? 0.8 : 1.5;
       distribusiSentimenChart.update();
       top20TfidfChart.update();
+    });
+
+    // Download dropdown functionality
+    function toggleDropdown() {
+      const dropdown = document.getElementById('downloadDropdown');
+      dropdown.classList.toggle('hidden');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('downloadDropdown');
+      const button = event.target.closest('button');
+      
+      if (!button || !button.onclick || button.onclick.toString().indexOf('toggleDropdown') === -1) {
+        dropdown.classList.add('hidden');
+      }
     });
   </script>
 </body>
