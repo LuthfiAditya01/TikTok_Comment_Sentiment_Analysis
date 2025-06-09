@@ -4,6 +4,10 @@
 
 Proyek ini menganalisis sentimen komentar TikTok pada konten bertagar #IndonesiaGelap menggunakan model Indonesian BERT untuk analisis sentimen yang akurat dalam bahasa Indonesia.
 
+## 🌟 [Jelajahi Hasil Analisis Kami](https://kelompok3sentimentanalysis.vercel.app/) dalam bentuk Website yang sudah kami rangkum, khusus untuk kamu!
+
+
+
 ## 🚀 Fitur Utama
 
 - ✅ **Indonesian BERT Model** untuk analisis sentimen bahasa Indonesia
